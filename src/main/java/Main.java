@@ -34,12 +34,13 @@ public class Main {
                     System.out.print("password: ");
                     password = sc.next();
 
-                    if (loggedIn == true) {
+                    if (loggedIn) {
                         System.out.println("You are already logged in your bank account!");
                         continue;
                     }
 
-                    if (userModel == productDao.findByName(username) && password.equals(userModel.getPassword()) == true ) {
+                    if (userModel == productDao.findByName(username) && password.equals(userModel.getPassword())) {
+                        loggedIn = true;
                         System.out.println("LogIn success!");
                         System.out.println("Your commands = Withdraw, Deposit, Transfer, LogOut");
                         String option1 = sc.next();
@@ -87,7 +88,7 @@ public class Main {
 
                 default:
                     System.out.println("Wrong option! Try again...");
-                    continue;
+
             }
         }
 
