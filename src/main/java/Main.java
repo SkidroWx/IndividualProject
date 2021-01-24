@@ -18,7 +18,7 @@ public class Main {
         ProductDao productDao =new ProductDao(sessionFactory);
 
         while (acc) {
-            System.out.println("");
+            System.out.println();
             System.out.println("-------------------");
             System.out.println("[1]-LogIn-[1]");
             System.out.println("[2]-Register-[2]");
@@ -45,15 +45,16 @@ public class Main {
                         System.out.println("Your commands = Withdraw, Deposit, Transfer, LogOut");
                         String option1 = sc.next();
                         if (option1.equals("withdraw".toLowerCase())) {
+                            System.out.println("'");
 
                         } else if (option1.equals("deposit".toLowerCase())) {
-                            System.out.println();
+                            System.out.println("'");
 
                         } else if (option1.equals("transfer".toLowerCase())) {
-                            System.out.println();
+                            System.out.println("'");
 
                         } else if (option1.equals("logout".toLowerCase())) {
-                            System.out.println();
+                            System.out.println("'");
                         }
                     } else {
                         System.out.println("Wrong username or password! Try again...");
